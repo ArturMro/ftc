@@ -1,0 +1,569 @@
+body,main, section, article, div, ul, li, a, h1, h2, h3, h4, p,video, img{
+    margin: 0;
+    padding: 0;
+}
+
+/*
+font-family: 'Source Sans Pro', sans-serif;   -- body font 
+font-family: 'Playfair Display', serif;     -- headings font
+*/
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+
+}
+
+h1, h2, h3{
+    font-family: 'Playfair Display', serif;
+}
+
+h1{
+    font-size: 3em;
+    text-shadow: 1px 1px white;
+    
+}
+
+h2{
+    padding: .5em 0;
+    font-size: 2em;
+    text-align: center;
+}
+
+h3{
+    padding: .25em 0;
+    font-size: 1.5em;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(60,180,120);
+}
+
+/*--------  common classes in diferent sections  -------------*/
+.black{                     /*class that adds black background and white fonts to section*/
+    color: white;
+    background-color: black;
+
+}
+
+.contentWrap{
+    width:90%;
+    margin: 0 auto;
+    padding: 1em 1em 6em 1em;
+}
+
+.triangleOne, .triangleTwo{
+    width: 51vw;
+    height: 90px;
+    position: absolute;
+    bottom: -1px;
+    background-color: white;
+}
+
+.triangleOne{
+    left: 0;
+    clip-path: polygon(0 0, 0% 100%, 100% 100%);
+}
+
+.triangleTwo{
+    right: 0;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+
+.blackTriangle{
+    background-color: black;
+}
+
+.anchors{
+    position: absolute;
+    top: -90px;
+}
+
+/*------------------  header  ---------------------*/
+header{
+    background-color: white;
+    height: 90px;
+    width: 100%;
+    position: fixed;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+}
+
+header img{
+    margin: 10px 20px;
+}
+
+.menuIcons{
+    font-size: 3em;
+    padding: 10px;
+}
+
+.menuIcons:hover{
+    cursor: pointer;
+}
+
+nav{
+    display: none;
+}
+
+
+nav ul{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav a:link {
+    display: block;
+    padding: .25em 1em;
+    font-weight: bold;
+}
+
+nav a:hover, nav a:focus{
+    text-shadow: 0 0 black;
+}
+
+/*---------------  home  ----------------------------*/
+#home{
+    width: 100vw;
+    min-height: 100%;
+    height: auto;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.videoBlock{
+    width:100%;
+    height: 100vh;
+    background: url(../images/irelandView.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#video{
+    display: none;
+}
+
+.banner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    background-color: rgba(255,255,255,.2);
+}
+
+.banner p{
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: 1px 1px white;
+    display: block;
+    padding: .25em;
+}
+
+.banner :last-child{
+    font-size: 1.5em;
+    font-style: italic;
+    color: rgb(60,180,120);
+    padding: 3em 0 1em 0;
+    text-shadow: 1px 1px black;
+}
+
+
+
+
+
+/*-----------------  course details  ---------------*/
+#course_details{
+    position: relative;
+    /*margin-top: 200px;*/
+    
+}
+
+.detailsWrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+#course_details p{
+    padding: .5em;
+}
+
+
+
+/*----------  certification  -------------*/
+#certification{
+    position: relative;
+}
+#certification img{
+    display: none;
+}
+.rewards{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*-----------  frequently asked questions  ----------*/
+#faq{
+    position: relative;
+}
+
+.questionWrap{
+    padding: 1em 1em 2em 1em;
+    border-top: 1px solid rgb(60,180,120);
+    position: relative;
+}
+
+.lastQuestion{
+    border-bottom: 1px solid rgb(60,180,120);
+}
+
+.questionWrap p{
+    padding: 0 .5em;
+}
+
+.question{
+    text-align: center;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.faqAnswer{
+    display: none;
+    
+}
+
+.fa-chevron-down, .fa-chevron-up{
+    position: absolute;
+    right:50%;
+    bottom:0;
+    font-size: 1.5em;
+    
+}
+
+/*----------------  contact us  ----------------*/
+
+#contact_us{
+    position: relative;
+}
+/*contact form*/
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form legend{
+    text-align: center;
+}
+
+.form div{
+    width:80%;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.form input, .form textarea{
+    width:50vw;
+    box-sizing: border-box;
+}
+
+.form input{
+    padding: 1em;
+}
+
+.form textarea{
+    height: 5em;
+    font-size: 16px;
+}
+
+.form label{
+    vertical-align: auto;
+}
+
+.button{
+    background-color: rgb(60,180,120);
+    padding: .5em 2em;
+    font-size: 1.5em;
+    border: none;
+    margin: 1em 0;
+}
+/*address and map*/
+.directions{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.address{
+    padding: 1em;
+}
+
+iframe{
+    width:100%;
+}
+
+.selfApply{
+    display: block;
+    padding: 1em 0;
+    width: 60%;
+    margin: 0 auto;
+    font-style: italic;
+    text-align: center;
+}
+
+/* usefull links and social*/
+.linksAndSocial{
+    display: flex;
+    flex-direction: column;
+}
+
+.links, .social{
+    padding: 1em;
+}
+
+/*---------------  footer  ------------------------*/
+footer{
+    padding: 1em;
+    text-align: center;
+}
+/*testimonials*/
+#testimonials{
+    display: none;
+}
+
+.testimonialsWrapper{
+    width: 100%;
+    margin: 0 auto 2em;
+    position: relative;
+}
+
+.carousel{
+    width: 600px;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.slider{
+    display: flex;
+    flex-direction: row;
+    width:250%;
+    transform: translate(-20%);  /*this is to be changed by js on click arrow*/
+}
+
+.testimonialsBox{
+    flex-basis: 50%;
+    padding: 1em;
+}
+
+/*slider arrows*/
+.fa-chevron-left, .fa-chevron-right{
+    color: rgb(60,180,120);
+    font-size: 3em;
+    position: absolute;
+}
+
+.fa-chevron-left{
+    top: 45%;
+    left: 0;
+}
+
+.fa-chevron-right{
+    top: 45%;
+    right: 0;
+}
+
+.testimonialAvatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgb(60,180,120);
+    margin: 0 auto;
+}
+
+.avatarTwo, .avatarFour{
+    background: url(../images/female_avatar.jpg) no-repeat;
+    background-size: contain;
+}
+
+.avatarOne, .avatarThree, .avatarFive{
+    background: url(../images/male_avatar.jpg) no-repeat;
+    background-size: contain;
+}
+
+.fa-star{
+    color: rgb(60,180,120);
+}
+
+
+@media screen and (min-width: 768px) {
+
+
+    /*home*/
+    #video{
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /*course details*/
+    .detailsWrapper{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    /*certification*/
+    #certification img{
+        display: block;
+        margin: 1em;
+        width: 100%;
+        height: auto;
+    }
+
+    .rewards{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .rewards section{
+        width:40%;
+    }
+
+    /*faq*/
+    .fa-chevron-down, .fa-chevron-up{
+        right: 0;
+        bottom: 50%; 
+    }
+
+    /* contact us*/
+    .form input, .form textarea{
+        width:40vw;
+        justify-content: space-between;
+    }
+    .directions{
+        flex-direction: row;
+        margin: 1em 0;
+    }
+    .address{
+        width: 40%;
+    }
+
+    .linksAndSocial{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+   
+    #testimonials{
+        display: block;
+    }
+
+    .testimonialsBox p{
+        padding: .5em;
+    }
+
+}
+
+
+
+
+
+@media screen and (min-width: 1000px) {
+
+    
+    body{
+        font-size: 20px;
+    }
+    h1{
+        font-size: 4em;
+        margin-top: 100px;
+    }
+
+    /*navigation*/
+    .menuIcons{
+        display: none;
+    }
+
+    nav{
+        display: block;
+    }
+
+
+    .contentWrap{
+        width:70%;
+    }
+
+    
+    .banner p{
+        font-size: 3em;
+    }
+
+    .banner :last-child{
+        font-size: 2em;
+    }
+
+    
+    
+    
+    
+    
+
+    
+}
+
+@media screen and (min-width: 1200px) {
+
+    /*carousel slider*/
+    .carousel{
+        width: 900px;
+        
+    }
+
+    /*slider arrows*/
+        
+    .fa-chevron-left{
+        left: 5%;
+    }
+
+    .fa-chevron-right{
+        right: 5%;
+    }
+
+}
+
+
+
+
+@media screen and (min-width: 1500px) {
+
+/*slider arrows*/
+        
+.fa-chevron-left{
+    left: 15%;
+}
+
+.fa-chevron-right{
+    right: 15%;
+}
+
+
+}
