@@ -26,9 +26,20 @@ h1{
 }
 
 h2{
-    padding: .5em 0;
+    
+    padding: 2em 0 1em 0;
     font-size: 2em;
     text-align: center;
+}
+
+h2 span{
+    width: 150px;
+    height: 5px;
+    background-color: rgb(60,180,120);
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 h3{
@@ -55,14 +66,14 @@ a{
 .contentWrap{
     width:90%;
     margin: 0 auto;
-    padding: 1em 1em 6em 1em;
+    padding: 1em 1em 10em 1em;
 }
 
 .triangleOne, .triangleTwo{
-    width: 51vw;
+    width: 53vw;
     height: 90px;
     position: absolute;
-    bottom: -1px;
+    bottom: -4px;
     background-color: white;
 }
 
@@ -94,15 +105,40 @@ header{
     z-index: 5;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid rgb(60,180,120);
+}
+/*logo*/
+.logo{
+    margin-left: 1em;
+    max-width: 50%;   /*for smallest oldest devices*/
 }
 
-header img{
-    margin: 10px 20px;
+.logo p{
+    font-size: 2em;
+    font-weight: bold;
 }
 
+.logo span{
+    color: white;
+    background-color: rgb(60,180,120);
+}
+.logo:hover p{
+    color: white;
+    background-color: rgb(60,180,120);
+}
+
+.logo:hover span{
+    color: rgb(60,180,120);
+    background-color: white;
+    border: 3px solid white;
+}
+
+/*hamburger*/
 .menuIcons{
     font-size: 3em;
-    padding: 10px;
+    padding-right: 10px;
 }
 
 .menuIcons:hover{
@@ -110,27 +146,31 @@ header img{
 }
 
 nav{
-    display: none;
+    display: none;                   /*this is for js*/
 }
-
 
 nav ul{
     height: 100%;
+    width: 100vw;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    flex-direction: column;
     align-items: center;
+}
+
+nav li{
+    width: 100%;
 }
 
 nav a:link {
     display: block;
-    padding: .25em 1em;
+    padding: 1em 0;
     font-weight: bold;
+    background-color: white;
+    text-align: center;
+    font-size: 2em;
 }
 
-nav a:hover, nav a:focus{
-    text-shadow: 0 0 black;
-}
+
 
 /*---------------  home  ----------------------------*/
 #home{
@@ -160,7 +200,7 @@ nav a:hover, nav a:focus{
     transform: translate(-50%, -50%);
     text-align: center;
     width: 100%;
-    background-color: rgba(255,255,255,.2);
+   /* background-color: rgba(255,255,255,.2);*/
 }
 
 .banner p{
@@ -269,7 +309,7 @@ nav a:hover, nav a:focus{
 
 .form div{
     width:80%;
-    margin-bottom: 5px;
+    margin: 5px 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -287,7 +327,6 @@ nav a:hover, nav a:focus{
 
 .form textarea{
     height: 5em;
-    font-size: 16px;
 }
 
 .form label{
@@ -299,8 +338,14 @@ nav a:hover, nav a:focus{
     padding: .5em 2em;
     font-size: 1.5em;
     border: none;
-    margin: 1em 0;
+    margin: .5em 0 1.5em 0;
 }
+
+.button:hover{
+    cursor: pointer;
+}
+
+
 /*address and map*/
 .directions{
     display: flex;
@@ -310,6 +355,12 @@ nav a:hover, nav a:focus{
 
 .address{
     padding: 1em;
+}
+
+.address a{
+    padding-top: 1em;
+    display: inline-block;
+    width: 100%;
 }
 
 iframe{
@@ -335,11 +386,25 @@ iframe{
     padding: 1em;
 }
 
+.social a{
+    color: rgb(54, 100, 228);
+}
+
 /*---------------  footer  ------------------------*/
 footer{
-    padding: 1em;
     text-align: center;
+    position: relative;
 }
+
+footer p{
+    display: block;
+    padding: 1em 0;
+}
+
+footer span{
+    color: rgb(60,180,120);
+}
+
 /*testimonials*/
 #testimonials{
     display: none;
@@ -374,6 +439,10 @@ footer{
     padding: 1em;
 }
 
+.testimonialsBox p:last-child{
+    font-style: italic;
+}
+
 /*slider arrows*/
 .fa-chevron-left, .fa-chevron-right{
     color: rgb(60,180,120);
@@ -388,18 +457,33 @@ footer{
     margin: 0 auto;
 }
 
+
 .avatarTwo, .avatarFour{
     background: url(../images/female_avatar.jpg) no-repeat;
-    background-size: contain;
 }
 
-.avatarOne, .avatarThree, .avatarFive{
+.avatarOne, .avatarFive{
     background: url(../images/male_avatar.jpg) no-repeat;
+}
+
+.avatarThree{
+    background: url(../images/artur_m.jpg) no-repeat;
+}
+
+.avatarOne, .avatarThree, .avatarFive, .avatarTwo, .avatarFour{
     background-size: contain;
 }
 
 .fa-star{
     color: rgb(60,180,120);
+}
+
+@media screen and (max-width: 428px) {              /*this is added to move green bar under heading 2 in faq section*/
+
+    #faq h2 span{
+        top: 160px;
+    }
+
 }
 
 
@@ -488,6 +572,10 @@ footer{
         margin-top: 100px;
     }
 
+    h2 span{
+        top: 140px;
+    }
+
     /*navigation*/
     .menuIcons{
         display: none;
@@ -497,18 +585,38 @@ footer{
         display: block;
     }
 
+    nav ul{
+        width: auto;
+        flex-direction: row;
+        justify-content: flex-end;
+        
+    }
+    
+    nav li{
+        width: auto;
+    }
 
+    nav a:link {
+        font-size: 1em;
+        padding: .25em 1em;
+    }
+    
+    nav a:hover, nav a:focus{
+        text-shadow: 0 0 black;
+    }
+
+    /*common elements in different sections*/
     .contentWrap{
         width:70%;
     }
 
-    
+    /*home*/
     .banner p{
-        font-size: 3em;
+        font-size: 2em;
     }
 
     .banner :last-child{
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     
