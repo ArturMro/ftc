@@ -48,7 +48,7 @@ a{
 /*--------  common classes in diferent sections  -------------*/
 .black{                     /*class that adds black background and white fonts to section*/
     color: white;
-    background-color: black;
+    background-color: rgb(15, 15, 15);
 
 }
 
@@ -77,7 +77,7 @@ a{
 }
 
 .blackTriangle{
-    background-color: black;
+    background-color: rgb(15, 15, 15);
 }
 
 .anchors{
@@ -134,11 +134,11 @@ nav a:hover, nav a:focus{
 
 /*---------------  home  ----------------------------*/
 #home{
-    width: 100vw;
+    width: 99vw;
     min-height: 100%;
     height: auto;
     position: relative;
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
 }
 
 .videoBlock{
@@ -183,10 +183,10 @@ nav a:hover, nav a:focus{
 
 
 
-/*-----------------  course details  ---------------*/
-#course_details{
+/*-----------------  course content  ---------------*/
+#course_content{
     position: relative;
-    /*margin-top: 200px;*/
+    text-align: center;
     
 }
 
@@ -195,8 +195,8 @@ nav a:hover, nav a:focus{
     flex-direction: column;
 }
 
-#course_details p{
-    padding: .5em;
+#course_content p{
+    padding: .5em 0;
 }
 
 
@@ -236,12 +236,10 @@ nav a:hover, nav a:focus{
 .question{
     text-align: center;
     font-size: 1.25em;
-    font-weight: bold;
 }
 
 .faqAnswer{
     display: none;
-    
 }
 
 .fa-chevron-down, .fa-chevron-up{
@@ -348,9 +346,12 @@ footer{
 }
 
 .testimonialsWrapper{
-    width: 100%;
+    width: 90%;
     margin: 0 auto 2em;
-    position: relative;
+    /*position: relative;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .carousel{
@@ -377,17 +378,6 @@ footer{
 .fa-chevron-left, .fa-chevron-right{
     color: rgb(60,180,120);
     font-size: 3em;
-    position: absolute;
-}
-
-.fa-chevron-left{
-    top: 45%;
-    left: 0;
-}
-
-.fa-chevron-right{
-    top: 45%;
-    right: 0;
 }
 
 .testimonialAvatar{
@@ -537,33 +527,6 @@ footer{
         width: 900px;
         
     }
-
-    /*slider arrows*/
-        
-    .fa-chevron-left{
-        left: 5%;
-    }
-
-    .fa-chevron-right{
-        right: 5%;
-    }
-
-}
-
-
-
-
-@media screen and (min-width: 1500px) {
-
-/*slider arrows*/
-        
-.fa-chevron-left{
-    left: 15%;
-}
-
-.fa-chevron-right{
-    right: 15%;
-}
 
 
 }
