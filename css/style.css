@@ -238,15 +238,25 @@ nav a:link {
     
 }
 
-.detailsWrapper{
-    display: flex;
-    flex-direction: column;
-}
-
 #course_content p{
     padding: .5em 0;
 }
 
+.detailTails{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.detailTails li{
+    border: 1px solid rgb(60,180,120);
+    display: block;
+    width: 40%;
+    padding: 1em;
+    margin: .5em;
+}
 
 
 /*----------  certification  -------------*/
