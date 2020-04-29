@@ -146,7 +146,7 @@ header{
 }
 
 #hamburger{
-    display: block;
+    display: block;  /*default for jquery*/
 }
 
 #cross{
@@ -154,7 +154,7 @@ header{
 }
 
 nav{
-    display: none;                   /*this is for js*/
+    display: none;    /*for jquery*/
 }
 
 nav ul{
@@ -224,7 +224,7 @@ nav a:link {
     font-style: italic;
     color: rgb(60,180,120);
     padding: 3em 0 1em 0;
-    text-shadow: 1px 1px black;
+    text-shadow: 1px 1px rgb(15, 15, 15);
 }
 
 
@@ -268,9 +268,12 @@ nav a:link {
 }
 
 .questionWrap{
-    padding: 1em 1em 2em 1em;
+    padding: 2em 1em 2em 1em;
     border-top: 1px solid rgb(60,180,120);
-    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
 }
 
 .lastQuestion{
@@ -282,21 +285,32 @@ nav a:link {
 }
 
 .question{
-    text-align: center;
+    
     font-size: 1.25em;
+    width:85%;
+    display: block;
+    margin-bottom: 1em;
 }
 
 .faqAnswer{
     display: none;
-}
-
-.fa-chevron-down, .fa-chevron-up{
-    position: absolute;
-    right:50%;
-    bottom:0;
-    font-size: 1.5em;
     
 }
+
+.arrowsContainer{
+    width: 1.5em;
+    height: 1.5em;
+    overflow: hidden;
+}
+.arrowDown, .arrowUp{
+    cursor: pointer;
+    font-size: 1.5em;    
+}
+
+.arrowUp{
+    display: none;
+}
+
 
 /*----------------  contact us  ----------------*/
 
@@ -439,6 +453,7 @@ footer span{
     display: flex;
     flex-direction: row;
     width:250%;
+    transition: all 0.5s;
     transform: translate(-20%);  /*this is to be changed by js on click arrow*/
 }
 
@@ -455,6 +470,7 @@ footer span{
 .fa-chevron-left, .fa-chevron-right{
     color: rgb(60,180,120);
     font-size: 3em;
+    cursor: pointer;
 }
 
 .testimonialAvatar{
@@ -606,11 +622,13 @@ footer span{
 
     nav a:link {
         font-size: 1em;
-        padding: .25em 1em;
+        padding: .5em 1em;
     }
     
     nav a:hover, nav a:focus{
-        text-shadow: 0 0 black;
+        text-shadow: 0 0 rgb(15, 15, 15);
+        box-shadow: 0 0 10px 1px rgb(60,180,120) inset;
+        border-radius: 3px;
     }
 
     /*common elements in different sections*/
