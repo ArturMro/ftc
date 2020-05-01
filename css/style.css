@@ -1,4 +1,4 @@
-body,main, section, article, div, ul, li, a, h1, h2, h3, h4, p,video, img{
+body, main, article, section, header, footer, div, ul, li, a, h1, h2, h3, h4, p, video, img{
     margin: 0;
     padding: 0;
 }
@@ -12,7 +12,6 @@ body{
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 16px;
     line-height: 1.4;
-
 }
 
 h1, h2, h3{
@@ -22,20 +21,19 @@ h1, h2, h3{
 h1{
     font-size: 3em;
     text-shadow: 1px 1px white;
-    
 }
 
 h2{
-    
     padding: 2em 0 1em 0;
     font-size: 2em;
     text-align: center;
 }
 
-h2 span{
+/*this is green bar under headings of each main section (page)*/
+h2 span{  
     width: 150px;
     height: 5px;
-    background-color: rgb(60,180,120);
+    background-color: rgb(22, 119, 71);
     position: absolute;
     top: 120px;
     left: 50%;
@@ -45,6 +43,7 @@ h2 span{
 h3{
     padding: .25em 0;
     font-size: 1.5em;
+    text-align: center;
 }
 
 ul{
@@ -53,23 +52,22 @@ ul{
 
 a{
     text-decoration: none;
-    color: rgb(60,180,120);
+    color: rgb(22, 119, 71);
 }
 
-/*--------  common classes in diferent sections  -------------*/
+/*--------------------------  common classes in diferent sections  ------------------------*/
 .black{                     /*class that adds black background and white fonts to section*/
     color: white;
     background-color: rgb(15, 15, 15);
-
 }
 
-.contentWrap{
+.contentWrap{                   /*class that contain content of main sections on website*/
     width:90%;
     margin: 0 auto;
     padding: 1em 1em 10em 1em;
 }
 
-.triangleOne, .triangleTwo{
+.triangleOne, .triangleTwo{       /* class of triangles that make v shape between main sections*/
     width: 53vw;
     height: 90px;
     position: absolute;
@@ -91,7 +89,7 @@ a{
     background-color: rgb(15, 15, 15);
 }
 
-.anchors{
+.anchors{                     /*class to position anchors for navigation*/
     position: absolute;
     top: -90px;
 }
@@ -107,8 +105,9 @@ header{
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    border-bottom: 1px solid rgb(60,180,120);
+    border-bottom: 1px solid rgb(22, 119, 71);
 }
+
 /*logo*/
 .logo{
     margin-left: 1em;
@@ -116,21 +115,20 @@ header{
 }
 
 .logo p{
-    font-size: 2em;
-    font-weight: bold;
+    font-size: 1.5em;
 }
 
 .logo span{
     color: white;
-    background-color: rgb(60,180,120);
+    background-color: rgb(22, 119, 71);
 }
 .logo:hover p{
     color: white;
-    background-color: rgb(60,180,120);
+    background-color: rgb(22, 119, 71);
 }
 
 .logo:hover span{
-    color: rgb(60,180,120);
+    color: rgb(22, 119, 71);
     background-color: white;
     border: 3px solid white;
 }
@@ -171,30 +169,30 @@ nav li{
 
 nav a:link {
     display: block;
-    padding: 1em 0;
+    padding: .75em 0;
     font-weight: bold;
     background-color: white;
     text-align: center;
     font-size: 2em;
 }
 
-
-
-/*---------------  home  ----------------------------*/
+/*--------------------------------  home  ----------------------------*/
 #home{
     width: 99vw;
-    min-height: 100%;
     height: auto;
+    min-height: 850px;
     position: relative;
     box-sizing: border-box;
+    background: url(../images/irelandView.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .videoBlock{
     width:100%;
     height: 100vh;
-    background: url(../images/irelandView.jpg) no-repeat;
-    background-position: center;
-    background-size: cover;
+    
+    
 }
 
 #video{
@@ -208,7 +206,6 @@ nav a:link {
     transform: translate(-50%, -50%);
     text-align: center;
     width: 100%;
-   /* background-color: rgba(255,255,255,.2);*/
 }
 
 .banner p{
@@ -222,20 +219,20 @@ nav a:link {
 .banner :last-child{
     font-size: 1.5em;
     font-style: italic;
-    color: rgb(60,180,120);
+    color: rgb(22, 119, 71);
     padding: 3em 0 1em 0;
     text-shadow: 1px 1px rgb(15, 15, 15);
 }
 
-
-
-
-
-/*-----------------  course content  ---------------*/
+/*-----------------------------  course content  ----------------------------*/
 #course_content{
     position: relative;
-    text-align: center;
-    
+    text-align: center; 
+}
+
+#course_content h3{
+    border-bottom: 1px solid;
+    border-image: linear-gradient(90deg, rgb(15,15,15), rgb(15,15,15), rgb(22, 119, 71), rgb(15,15,15), rgb(15,15,15)) 2;
 }
 
 #course_content p{
@@ -251,35 +248,45 @@ nav a:link {
 }
 
 .detailTails li{
-    border: 1px solid rgb(60,180,120);
+    border: 1px solid rgb(22, 119, 71);
+    box-shadow: 0 0 7px 1px rgba(60,180,120,.7) inset;
     display: block;
     width: 40%;
     padding: 1em;
     margin: .5em;
 }
 
-
-/*----------  certification  -------------*/
+/*-----------------------------  certification  ------------------------------*/
 #certification{
     position: relative;
 }
+
 #certification img{
     display: none;
 }
+
 .rewards{
     display: flex;
     flex-direction: column;
+    margin-top: 1em;
 }
 
+.rewards section{
+    padding: 1em;
+    border: 1px solid rgb(30, 150, 90);
+    border-radius: 3px;
+    margin-bottom: 1em;
+    box-shadow: 0 0 10px 2px rgb(30, 150, 90) inset;
+}
 
-/*-----------  frequently asked questions  ----------*/
+/*-------------------------  frequently asked questions  --------------------------*/
 #faq{
     position: relative;
 }
 
 .questionWrap{
     padding: 2em 1em 2em 1em;
-    border-top: 1px solid rgb(60,180,120);
+    border-top: 1px solid rgb(30, 150, 90);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -287,7 +294,7 @@ nav a:link {
 }
 
 .lastQuestion{
-    border-bottom: 1px solid rgb(60,180,120);
+    border-bottom: 1px solid rgb(30, 150, 90);
 }
 
 .questionWrap p{
@@ -322,7 +329,7 @@ nav a:link {
 }
 
 
-/*----------------  contact us  ----------------*/
+/*-----------------------------  contact us  --------------------------------*/
 
 #contact_us{
     position: relative;
@@ -335,8 +342,11 @@ nav a:link {
     align-items: center;
 }
 
-.form legend{
+.form p{
     text-align: center;
+    display: block;
+    padding: .5em 0;
+    font-size: 1.125em;
 }
 
 .form div{
@@ -351,6 +361,8 @@ nav a:link {
 .form input, .form textarea{
     width:50vw;
     box-sizing: border-box;
+    border: none;
+    box-shadow: 0 0 4px 1px rgb(22, 119, 71) inset;
 }
 
 .form input{
@@ -361,20 +373,21 @@ nav a:link {
     height: 5em;
 }
 
-.form label{
-    vertical-align: auto;
-}
-
 .button{
-    background-color: rgb(60,180,120);
+    margin: .5em 0 1.5em 0;
     padding: .5em 2em;
     font-size: 1.5em;
-    border: none;
-    margin: .5em 0 1.5em 0;
+    color: rgb(22, 119, 71);
+    background-color: white; 
+    border: 1px solid rgb(22, 119, 71);
+    border-radius: 3px;
+    
 }
 
 .button:hover{
     cursor: pointer;
+    color: white;
+    background-color: rgb(22, 119, 71);
 }
 
 
@@ -382,7 +395,6 @@ nav a:link {
 .directions{
     display: flex;
     flex-direction: column;
-    
 }
 
 .address{
@@ -397,6 +409,8 @@ nav a:link {
 
 iframe{
     width:100%;
+    height: 35vh;
+    border: none;
 }
 
 .selfApply{
@@ -422,7 +436,7 @@ iframe{
     color: rgb(54, 100, 228);
 }
 
-/*---------------  footer  ------------------------*/
+/*---------------------------------  footer  --------------------------------*/
 footer{
     text-align: center;
     position: relative;
@@ -434,7 +448,7 @@ footer p{
 }
 
 footer span{
-    color: rgb(60,180,120);
+    color: rgb(22, 119, 71);
 }
 
 /*testimonials*/
@@ -445,7 +459,6 @@ footer span{
 .testimonialsWrapper{
     width: 90%;
     margin: 0 auto 2em;
-    /*position: relative;*/
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -478,7 +491,7 @@ footer span{
 
 /*slider arrows*/
 .fa-chevron-left, .fa-chevron-right{
-    color: rgb(60,180,120);
+    color: rgb(22, 119, 71);
     font-size: 3em;
     cursor: pointer;
 }
@@ -487,7 +500,7 @@ footer span{
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: rgb(60,180,120);
+    background-color: rgb(22, 119, 71);
     margin: 0 auto;
 }
 
@@ -509,21 +522,16 @@ footer span{
 }
 
 .fa-star{
-    color: rgb(60,180,120);
+    color: rgb(22, 119, 71);
 }
 
 @media screen and (max-width: 428px) {              /*this is added to move green bar under heading 2 in faq section*/
-
     #faq h2 span{
         top: 160px;
     }
-
 }
 
-
 @media screen and (min-width: 768px) {
-
-
     /*home*/
     #video{
         display: inline-block;
@@ -541,7 +549,7 @@ footer span{
     /*certification*/
     #certification img{
         display: block;
-        margin: 1em;
+        margin: 1em 0 1em 0;
         width: 100%;
         height: auto;
     }
@@ -580,7 +588,7 @@ footer span{
         flex-direction: row;
         justify-content: space-evenly;
     }
-   
+    /*footer*/
     #testimonials{
         display: block;
     }
@@ -588,16 +596,10 @@ footer span{
     .testimonialsBox p{
         padding: .5em;
     }
-
 }
-
-
-
-
 
 @media screen and (min-width: 1000px) {
 
-    
     body{
         font-size: 20px;
     }
@@ -622,8 +624,7 @@ footer span{
     nav ul{
         width: auto;
         flex-direction: row;
-        justify-content: flex-end;
-        
+        justify-content: flex-end;   
     }
     
     nav li{
@@ -631,13 +632,13 @@ footer span{
     }
 
     nav a:link {
-        font-size: 1em;
+        font-size: 1.125em;
         padding: .5em 1em;
     }
     
     nav a:hover, nav a:focus{
         text-shadow: 0 0 rgb(15, 15, 15);
-        box-shadow: 0 0 10px 1px rgb(60,180,120) inset;
+        box-shadow: 0 0 10px 1px rgb(22, 119, 71) inset;
         border-radius: 3px;
     }
 
@@ -654,23 +655,12 @@ footer span{
     .banner :last-child{
         font-size: 1.5em;
     }
-
-    
-    
-    
-    
-    
-
-    
 }
 
 @media screen and (min-width: 1200px) {
 
     /*carousel slider*/
     .carousel{
-        width: 900px;
-        
+        width: 900px; 
     }
-
-
 }
