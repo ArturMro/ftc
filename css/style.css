@@ -122,7 +122,7 @@ header{
     color: white;
     background-color: rgb(22, 119, 71);
 }
-.logo:hover p{
+.logo:hover p {
     color: white;
     background-color: rgb(22, 119, 71);
 }
@@ -178,8 +178,7 @@ nav a:link {
 
 /*--------------------------------  home  ----------------------------*/
 #home{
-    width: 99vw;
-    height: auto;
+    width: 100%;
     min-height: 850px;
     position: relative;
     box-sizing: border-box;
@@ -191,8 +190,6 @@ nav a:link {
 .videoBlock{
     width:100%;
     height: 100vh;
-    
-    
 }
 
 #video{
@@ -209,11 +206,11 @@ nav a:link {
 }
 
 .banner p{
+    display: block;
+    padding: .25em;
     font-size: 2em;
     font-weight: bold;
     text-shadow: 1px 1px white;
-    display: block;
-    padding: .25em;
 }
 
 .banner :last-child{
@@ -302,7 +299,6 @@ nav a:link {
 }
 
 .question{
-    
     font-size: 1.25em;
     width:85%;
     display: block;
@@ -311,7 +307,6 @@ nav a:link {
 
 .faqAnswer{
     display: none;
-    
 }
 
 .arrowsContainer{
@@ -328,12 +323,12 @@ nav a:link {
     display: none;
 }
 
-
 /*-----------------------------  contact us  --------------------------------*/
 
 #contact_us{
     position: relative;
 }
+
 /*contact form*/
 .form{
     display: flex;
@@ -381,7 +376,6 @@ nav a:link {
     background-color: white; 
     border: 1px solid rgb(22, 119, 71);
     border-radius: 3px;
-    
 }
 
 .button:hover{
@@ -389,7 +383,6 @@ nav a:link {
     color: white;
     background-color: rgb(22, 119, 71);
 }
-
 
 /*address and map*/
 .directions{
@@ -503,7 +496,6 @@ footer span{
     background-color: rgb(22, 119, 71);
     margin: 0 auto;
 }
-
 
 .avatarTwo, .avatarFour{
     background: url(../images/female_avatar.jpg) no-repeat;
@@ -634,6 +626,7 @@ footer span{
     nav a:link {
         font-size: 1.125em;
         padding: .5em 1em;
+        transition: box-shadow 300ms ease-out;
     }
     
     nav a:hover, nav a:focus{
@@ -654,6 +647,12 @@ footer span{
 
     .banner :last-child{
         font-size: 1.5em;
+    }
+
+    /*faq*/
+    .fa-chevron-down:hover, .fa-chevron-up:hover{
+        color: rgb(22, 119, 71);
+        transition: color 200ms linear;
     }
 }
 
